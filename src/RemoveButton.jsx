@@ -12,7 +12,7 @@ function RemoveButton(props) {
     }
 
     return (
-        <button onClick={removeItemFromList} className="border-2 border-black dark:border-zinc-200 rounded px-1.5 hover:border-gray-300">Remove</button>
+        <button onClick={removeItemFromList} className="duration-500 border-2 border-black dark:border-zinc-200 rounded px-1.5 hover:border-zinc-500 dark:hover:border-zinc-400">Remove</button>
     );
 }
 

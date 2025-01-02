@@ -14,7 +14,7 @@ function InputAndAdd(props) {
     return (
         <div className="flex space-x-1">
             <ItemInputBox setInput={props.setInput} Input={props.input} AddItemToList={AddItemToList}/>
-            <button onClick={AddItemToList} className='text-lg dark:text-white'>Add</button>
+            <button onClick={AddItemToList} className='duration-500 text-lg dark:text-white hover:text-zinc-500 hover:dark:text-zinc-300'>Add</button>
         </div>
     );
 }
