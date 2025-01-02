@@ -13,7 +13,7 @@ function ListRender(props) {
             <div className="flex">
                 <input type="checkbox" id={item.id + "-Checkbox"} className="cursor-pointer w-5 h-5 mt-1" onChange={() => toggleCheckbox(item.id, !item.checked)} checked={item.checked !== undefined ? item.checked : false} disabled={item.disabled !== undefined ? item.disabled : false}/>
                 <p className="w-64 text-ellipsis overflow-hidden mx-2 border-2 border-zinc-400 rounded px-1">{item.text}</p>
-                <button onClick={() => createNewChild(item)} className="border-2 border-black dark:border-zinc-200 rounded w-7 h-7 mr-2">+</button>
+                <button onClick={() => createNewChild(item)} className="border-2 border-black dark:border-zinc-200 rounded hidden sm:block w-7 h-7 mr-2">+</button>
                 <RemoveButton list={props.list} setList={props.setList} idToRemove={item.id}/>
             </div>
             {item.children.length > 0 && (
