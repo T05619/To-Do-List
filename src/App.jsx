@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react"
 import ListRender from "./ListRender";
 import InputAndAdd from "./InputAndAdd";
@@ -24,10 +25,19 @@ function App() {
 
   return (
     <div className="dark:bg-zinc-950 h-screen">
-      <h1 className="text-3xl mx-2 mb-3 pt-2 dark:text-white">To-Do List!</h1>
-      <ListRender list={list} setList={setList} input={input} setInput={setInput}/>
-      <InputAndAdd input={input} setInput={setInput} list={list} setList={setList}/>
-      <button onClick={changeTheme} id="themeButton" className="dark:text-white border-2 border-black dark:border-white rounded p-1 dark:hover:border-zinc-300 hover:border-zinc-600 absolute top-2 right-2">{themeButtonText}</button>
+      <Routes>
+        <Route
+          path="/"
+          element = {
+            <>
+              <h1 className="text-3xl mx-2 mb-3 pt-2 dark:text-white">To-Do List!</h1>
+              <ListRender list={list} setList={setList} input={input} setInput={setInput}/>
+              <InputAndAdd input={input} setInput={setInput} list={list} setList={setList}/>
+              <button onClick={changeTheme} id="themeButton" className="dark:text-white border-2 border-black dark:border-white rounded p-1 dark:hover:border-zinc-300 hover:border-zinc-600 absolute top-2 right-2">{themeButtonText}</button>
+            </>
+          }
+        />
+      </Routes>
     </div>
   )
 }
